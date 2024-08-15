@@ -106,7 +106,7 @@
                         </a>
                     </li>
                     <li class="">
-                        <a href="dashboard.html">
+                        <a href="examinees_management.html">
                             <i class="material-icons">groups</i>
                             <span>Examinees Management</span>
                         </a>
@@ -158,7 +158,7 @@
                 <div role="tabpanel" id="skins">
                     <ul style="list-style-type: none;">
                         <li>
-                            <a href="" style="margin-top: 15px; margin-left: -30px; display: inline-block; font-weight: 900; font-size: 15px; text-decoration: none; cursor: pointer; color: black"><i class="material-icons mr-2" style="font-size: 18px; vertical-align: middle;">lock</i> Change password</a>
+                            <a href="" data-toggle="modal" data-target="#changePasswordModal" style="margin-top: 15px; margin-left: -30px; display: inline-block; font-weight: 900; font-size: 15px; text-decoration: none; cursor: pointer; color: black"><i class="material-icons mr-2" style="font-size: 18px; vertical-align: middle;">lock</i> Change password</a>
                         </li>
                     </ul>
                     <ul style="list-style-type: none;">
@@ -171,6 +171,7 @@
         </aside>
         <!-- #END# Right Sidebar -->
     </section>
+    
 
     <section class="content">
         <div class="container-fluid">
@@ -235,6 +236,51 @@
         </div>
     </section>
 
+    <!-- CHANGE PASSWORD MODAL -->
+    <div class="modal fade" id="changePasswordModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="largeModalLabel">Change password</h4>
+                    <hr style="background-color: #811628; height: 2px; border: none;">
+                </div>
+                <div class="modal-body">
+                    <form id="form_advanced_validation" method="POST">
+                        <div class="form-group form-float">
+                            <label style="color: #212529; font-weight: 600;" class="form-label">Old Password</label>
+                            <div class="form-line">
+                                <input type="password" class="form-control" name="old_password" maxlength="12" minlength="6"
+                                    required>
+                            </div>
+                        </div>
+
+                        <div class="form-group form-float">
+                            <label style="color: #212529; font-weight: 600;" class="form-label">New Password</label>
+                            <div class="form-line">
+                                <input type="password" class="form-control" name="password" maxlength="12" minlength="6"
+                                    required>
+                            </div>
+                            <div class="help-info">Min. 6, Max. 12 characters</div>
+                        </div>
+
+                        <div class="form-group form-float">
+                            <label style="color: #212529; font-weight: 600;" class="form-label">Confirm Password</label>
+                            <div class="form-line">
+                                <input type="password" class="form-control" name="confirm_password" maxlength="12"
+                                    minlength="6" required>
+                            </div>
+                            <div class="help-info">Min. 6, Max. 12 characters</div>
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn bg-red waves-effect">SAVE CHANGES</button>
+                    <button type="button" class="btn btn-link waves-effect" data-dismiss="modal">CLOSE</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <!-- Jquery Core Js -->
     <script src="plugins/jquery/jquery.min.js"></script>
 
@@ -246,6 +292,9 @@
 
     <!-- Slimscroll Plugin Js -->
     <script src="plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
+
+    <!-- Jquery Validation Plugin Css -->
+    <script src="plugins/jquery-validation/jquery.validate.js"></script>
 
     <!-- Waves Effect Plugin Js -->
     <script src="plugins/node-waves/waves.js"></script>
@@ -271,6 +320,7 @@
     <script src="plugins/jquery-sparkline/jquery.sparkline.js"></script>
 
     <!-- Custom Js -->
+    <script src="js/pages/forms/form-validation.js"></script>
     <script src="js/admin.js"></script>
     <script src="js/pages/index.js"></script>
     <script src="js/chart.js"></script>
