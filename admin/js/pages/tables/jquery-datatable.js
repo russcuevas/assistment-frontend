@@ -3,12 +3,16 @@ $(function () {
         responsive: true
     });
 
-    //Exportable table
+    // Exportable table
     $('.js-exportable').DataTable({
         dom: 'Bfrtip',
         responsive: true,
         buttons: [
-            'copy', 'csv', 'excel', 'pdf', 'print'
+            { extend: 'copy', className: 'custom-button' },
+            { extend: 'csv', className: 'custom-button' },
+            { extend: 'excel', className: 'custom-button' },
+            { extend: 'pdf', className: 'custom-button' },
+            { extend: 'print', className: 'custom-button' }
         ]
     });
 });

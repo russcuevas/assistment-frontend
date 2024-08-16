@@ -60,6 +60,17 @@
         .fa-solid.fa-trash:hover {
             color: #a94442;
         }
+
+        /* DATA TABLE BUTTON */
+        .custom-button {
+            background-color: #811628 !important;
+            color: #fff !important;
+            border: none !important;
+        }
+
+        .custom-button:hover {
+            background-color: #a12a38 !important;
+        }
     </style>
 </head>
 
@@ -217,7 +228,8 @@
                 <ol style="font-size: 15px;" class="breadcrumb breadcrumb-col-red">
                     <li><a href="dashboard.html"><i style="font-size: 20px;" class="material-icons">home</i>
                             Dashboard</a></li>
-                    <li class="active"><i style="font-size: 20px;" class="material-icons">admin_panel_settings</i> List of Admins
+                    <li class="active"><i style="font-size: 20px;" class="material-icons">admin_panel_settings</i> List
+                        of Admins
                     </li>
                 </ol>
             </div>
@@ -314,37 +326,40 @@
                 <div class="modal-body">
                     <form id="form_advanced_validation" method="POST">
                         <div class="form-group form-float">
-                            <label class="form-label">Profile Picture</label><br>
-                            <img style="height:75px;" src="https://www.shutterstock.com/image-illustration/no-picture-available-placeholder-thumbnail-600nw-2179364083.jpg" alt="">
+                            <label style="color: #212529; font-weight: 600;" class="form-label">Profile
+                                Picture</label><br>
+                            <img style="height:75px;"
+                                src="https://www.shutterstock.com/image-illustration/no-picture-available-placeholder-thumbnail-600nw-2179364083.jpg"
+                                alt="">
                             <div class="form-line">
                                 <input type="file" class="form-control" name="profile_picture" required>
                             </div>
                         </div>
 
                         <div class="form-group form-float">
+                            <label style="color: #212529; font-weight: 600;" class="form-label">Fullname</label>
                             <div class="form-line">
                                 <input type="text" class="form-control" name="fullname" required>
-                                <label class="form-label">Fullname</label>
                             </div>
                         </div>
                         <div class="form-group form-float">
+                            <label style="color: #212529; font-weight: 600;" class="form-label">Email</label>
                             <div class="form-line">
                                 <input type="email" class="form-control" name="email" required>
-                                <label class="form-label">Email</label>
                             </div>
                         </div>
                         <div class="form-group form-float">
+                            <label style="color: #212529; font-weight: 600;" class="form-label">Password</label>
                             <div class="form-line">
                                 <input type="password" class="form-control" name="password" maxlength="12" minlength="6"
                                     required>
-                                <label class="form-label">Password</label>
                             </div>
                         </div>
                         <div class="form-group form-float">
+                            <label style="color: #212529; font-weight: 600;" class="form-label">Confirm Password</label>
                             <div class="form-line">
                                 <input type="password" class="form-control" name="confirm_password" maxlength="12"
                                     minlength="6" required>
-                                <label class="form-label">Confirm Password</label>
                             </div>
                         </div>
                 </div>
