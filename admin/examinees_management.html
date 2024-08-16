@@ -162,7 +162,7 @@
                         </a>
                         <ul class="ml-menu">
                             <li>
-                                <a href="pages/ui/alerts.html">Course</a>
+                                <a href="course.html">Course</a>
                             </li>
                             <li>
                                 <a href="pages/ui/animations.html">Questionnaire</a>
@@ -257,6 +257,8 @@
                                             <th>Birthday</th>
                                             <th>Address</th>
                                             <th>Age</th>
+                                            <th>Strand</th>
+                                            <th>Chooses Course</th>
                                             <th>Created At</th>
                                             <th>Updated At</th>
                                             <th>Actions</th>
@@ -270,6 +272,12 @@
                                             <td>December 26 2001</td>
                                             <td>Calingatan Mataasnakahoy Batangas</td>
                                             <td>22</td>
+                                            <td>HUMSS</td>
+                                            <td>
+                                                1. BSIT <br>
+                                                2. BSBA <br>
+                                                3. BSA <br>
+                                            </td>
                                             <td>August 13 2024</td>
                                             <td>August 14 2024</td>
                                             <td>
@@ -284,6 +292,12 @@
                                             <td>December 26 2001</td>
                                             <td>Bubuyan Mataasnakahoy Batangas</td>
                                             <td>21</td>
+                                            <td>STEM</td>
+                                            <td>
+                                                1. BSIT <br>
+                                                2. BSBA <br>
+                                                3. BSA <br>
+                                            </td>
                                             <td>August 13 2024</td>
                                             <td>August 14 2024</td>
                                             <td>
@@ -298,6 +312,12 @@
                                             <td>December 26 2001</td>
                                             <td>Calingatan Mataasnakahoy Batangas</td>
                                             <td>21</td>
+                                            <td>ABM</td>
+                                            <td>
+                                                1. BSIT <br>
+                                                2. BSBA <br>
+                                                3. BSA <br>
+                                            </td>
                                             <td>August 13 2024</td>
                                             <td>August 14 2024</td>
                                             <td>
@@ -314,56 +334,77 @@
             </div>
     </section>
 
-    <!-- Add admin modal -->
+    <!-- Add examinees modal -->
     <div class="modal fade" id="addExamineesModal" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-md" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title" id="largeModalLabel">Add admin</h4>
+                    <h4 class="modal-title" id="largeModalLabel">Add examinees</h4>
                     <hr style="background-color: #811628; height: 2px; border: none;">
                 </div>
                 <div class="modal-body">
                     <form id="form_advanced_validation" method="POST">
                         <div class="form-group form-float">
-                            <label style="color: black;" class="form-label">Default ID</label>
+                            <label style="color: #212529; font-weight: 600;" class="form-label">Default ID</label>
                             <div class="form-line">
                                 <input type="text" class="form-control" name="default_id" placeholder="2420580" readonly>
                             </div>
                         </div>
 
                         <div class="form-group form-float">
+                            <label style="color: #212529; font-weight: 600;" class="form-label">Fullname</label>
                             <div class="form-line">
                                 <input type="text" class="form-control" name="fullname" required>
-                                <label class="form-label">Fullname</label>
                             </div>
                         </div>
 
                         <div class="form-group form-float">
-                            <div class="form-line">
-                                <input type="text" class="form-control" name="address" required>
-                                <label class="form-label">Address</label>
-                            </div>
-                        </div>
-
-                        <div class="form-group form-float">
-                            <div class="form-line">
-                                <input type="email" class="form-control" name="email" required>
-                                <label class="form-label">Email</label>
-                            </div>
-                        </div>
-                        <div class="form-group form-float">
-                            <div class="form-line">
-                                <input type="text" class="form-control" name="age" required>
-                                <label class="form-label">Age</label>
-                            </div>
-                        </div>
-
-                        <div class="form-group form-float">
-                            <label style="color: black;" class="form-label">Birthday</label>
+                            <label style="color: #212529; font-weight: 600;" class="form-label">Birthday</label>
                             <div class="form-line">
                                 <input type="date" class="form-control" name="birthday" required>
                             </div>
                         </div>
+
+                        <div class="form-group form-float">
+                            <label style="color: #212529; font-weight: 600;" class="form-label">Address</label>
+                            <div class="form-line">
+                                <input type="text" class="form-control" name="address" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group form-float">
+                            <label style="color: #212529; font-weight: 600;" class="form-label">Email</label>
+                            <div class="form-line">
+                                <input type="email" class="form-control" name="email" required>
+                            </div>
+                        </div>
+                        <div class="form-group form-float">
+                            <label style="color: #212529; font-weight: 600;" class="form-label">Age</label>
+                            <div class="form-line">
+                                <input type="text" class="form-control" name="age" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group form-float">
+                            <label style="color: #212529; font-weight: 600;" class="form-label">Strand</label>
+                            <div class="form-line">
+                                <input type="text" class="form-control" name="strand" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group form-float">
+                            <label style="color: #212529; font-weight: 600;" class="form-label">Top 3 Course</label>
+                            <div class="form-line">
+                                <input type="text" class="form-control" name="top_1" required>
+                            </div>
+                            <div class="form-line">
+                                <input type="text" class="form-control" name="top_2" required>
+                            </div>
+                            <div class="form-line">
+                                <input type="text" class="form-control" name="top_3" required>
+                            </div>
+                        </div>
+
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn bg-red waves-effect">SAVE CHANGES</button>
