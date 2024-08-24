@@ -5,7 +5,7 @@ if (typeof jQuery === "undefined") {
 $.AdminBSB = {};
 $.AdminBSB.options = {
     colors: {
-        red: '#811628',
+        red: '#752738',
         pink: '#E91E63',
         purple: '#9C27B0',
         deepPurple: '#673AB7',

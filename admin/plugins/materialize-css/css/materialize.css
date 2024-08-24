@@ -84,11 +84,11 @@
 }
 
 .red {
-  background-color: #811628 !important;
+  background-color: #752738 !important;
 }
 
 .red-text {
-  color: #811628 !important;
+  color: #752738 !important;
 }
 
 .red.lighten-5 {
@@ -5825,8 +5825,8 @@ input[type=search].invalid,
 input[type=search]:focus.invalid,
 textarea.materialize-textarea.invalid,
 textarea.materialize-textarea:focus.invalid {
-  border-bottom: 1px solid #811628;
-  box-shadow: 0 1px 0 0 #811628;
+  border-bottom: 1px solid #752738;
+  box-shadow: 0 1px 0 0 #752738;
 }
 
 input:not([type]).invalid + label:after,
@@ -5856,7 +5856,7 @@ input[type=search]:focus.invalid + label:after,
 textarea.materialize-textarea.invalid + label:after,
 textarea.materialize-textarea:focus.invalid + label:after {
   content: attr(data-error);
-  color: #811628;
+  color: #752738;
   opacity: 1;
 }
 
